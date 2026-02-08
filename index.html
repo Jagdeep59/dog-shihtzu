@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shih Tzu World</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body{
+  background:linear-gradient(to right,#fdfbfb,#ebedee);
+  min-height:100vh;
+}
+
+
+nav{
+  background:#ff7a5c;
+  padding:15px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:600;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+
+section{
+  display:none;
+  padding:40px 20px;
+}
+
+section.active{
+  display:block;
+}
+
+
+.card{
+  max-width:900px;
+  background:white;
+  margin:auto;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+
+h1{
+  color:#ff7a5c;
+  margin-bottom:10px;
+}
+
+p{
+  color:#555;
+  line-height:1.6;
+  margin-bottom:20px;
+  font-size:16px;
+}
+
+
+img{
+  width:100%;
+  max-width:400px;
+  border-radius:15px;
+  margin-top:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+footer{
+  text-align:center;
+  margin-top:25px;
+  color:#777;
+  font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#" onclick="showHome()">Home</a>
+  <a href="#" onclick="showAbout()">About</a>
+</nav>
+
+
+<section id="home" class="active">
+
+  <div class="card">
+
+    <h1>Welcome to Shih Tzu World</h1>
+
+    <p>
+      This website is specially created to show my love for Shih Tzu dogs.
+      They are cute, friendly, and full of positive energy.
+      Here you can see my favorite moments and learn about this beautiful breed.
+    </p>
+
+    <img src="pic1.png" alt="My Shih Tzu">
+
+  </div>
+
+</section>
+
+
+
+<section id="about">
+
+  <div class="card">
+
+    <h1>About Shih Tzu</h1>
+
+    <p>
+      Shih Tzus are small companion dogs that were originally bred in China.
+      They are known for their long silky hair, sweet nature,
+      and strong bonding with their owners.
+    </p>
+
+    <p>
+      They love attention, enjoy playing,
+      and are perfect for families and apartment living.
+      With proper care and love, they become lifelong friends.
+    </p>
+
+    <img src="pic2.png" alt="Shih Tzu Dog">
+
+  </div>
+
+</section>
+
+
+<footer>
+  Made with by Jagdeep Singh | HTML • CSS • JavaScript
+</footer>
+
+<script>
+
+function showHome(){
+  document.getElementById("home").classList.add("active");
+  document.getElementById("about").classList.remove("active");
+}
+
+function showAbout(){
+  document.getElementById("about").classList.add("active");
+  document.getElementById("home").classList.remove("active");
+}
+
+</script>
+
+</body>
+</html>
